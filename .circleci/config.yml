@@ -111,7 +111,7 @@ jobs:
             npm audit fix --force 
             
   deploy-infrastructure:
-   docker:
+    docker:
       - image: amazon/aws-cli
     steps:
       - checkout
