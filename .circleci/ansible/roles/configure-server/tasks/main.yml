@@ -7,6 +7,14 @@
   become: true
   apt:
     upgrade: yes
+
+- name: "Install dependencies"
+  become: true
+  apt:
+    name:
+      - nodejs
+      - npm
+      - python3
 - name: "Install pm2"
   become: true
   command: "npm install -g pm2"
