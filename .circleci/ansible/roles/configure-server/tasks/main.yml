@@ -1,0 +1,12 @@
+- name: "Update local apt repo"
+  become: true
+  apt:
+    update_cache: yes
+
+- name: "Upgrade apt packages"
+  become: true
+  apt:
+    upgrade: yes
+- name: "Install pm2"
+  become: true
+  command: "npm install -g pm2"
